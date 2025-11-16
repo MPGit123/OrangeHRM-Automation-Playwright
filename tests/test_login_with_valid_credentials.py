@@ -1,7 +1,7 @@
 from pages.loginpage import LogInPage
 from playwright.sync_api import expect
 
-def test_login(page):
+def test_login_with_valid_credentials(page):
     loginPage = LogInPage(page)
     loginPage.open_orange_hrm()
     dashboardPage = loginPage.perform_login()
