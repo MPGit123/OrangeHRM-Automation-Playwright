@@ -17,3 +17,4 @@ class BasePage:
     def safe_click(self, element):
         expect(element).to_be_enabled()
         element.click()
+        self.page.wait_for_load_state(state="networkidle")

@@ -6,3 +6,4 @@ def test_login_with_valid_credentials(page):
     loginPage.open_orange_hrm()
     dashboardPage = loginPage.perform_login()
     expect(dashboardPage.topBarHeader).to_be_visible()
+    assert "dashboard" in page.url
